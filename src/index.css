@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-wrap1732916007947 {
+  @apply max-w-[1090px] w-full mt-2.5 mb-0 mx-auto p-0;
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+}
+.grid1732916007947 {
+  @apply relative transition-all duration-[0.5s] ease-[cubic-bezier(0,0,0.25,1)];
+  -webkit-transition: all 0.5s cubic-bezier(0, 0, 0.25, 1);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.view-full1732916007947 .grid1732916007947 {
+  -webkit-transform: translateZ(-1500px);
+  transform: translateZ(-1500px);
+}
+.grid1732916007947 figure,
+.grid1732916007947 .placeholder1732916007947 {
+  @apply w-[340px] h-[300px];
+}
+.grid1732916007947 figure {
+  @apply inline-block cursor-pointer select-none m-2.5;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.grid1732916007947 figure.active {
+  @apply opacity-0;
+}
+.grid1732916007947 .placeholder1732916007947 {
+  @apply pointer-events-none absolute transition-all duration-[0.5s] ease-[ease-out];
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.5s ease-out;
+}
+.placeholder1732916007947 > div {
+  @apply block absolute w-full h-full;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.placeholder1732916007947 .front1732916007947 img {
+  @apply w-full h-full;
+}
+.placeholder1732916007947 .back1732916007947 {
+  background: white;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.view-full1732916007947 .placeholder1732916007947 {
+  -webkit-transition: all 0.5s 0.1s cubic-bezier(0, 0, 0.25, 1);
+  transition: all 0.5s 0.1s cubic-bezier(0, 0, 0.25, 1);
+}
+.vertical1732916007947 .view-full1732916007947 .placeholder1732916007947 {
+  -webkit-transform: translateZ(1500px) rotateX(-179.9deg);
+  transform: translateZ(1500px) rotateX(-179.9deg);
+
+  /* FF, Chrome, can we agree on one direction, pleeease? */
+}
+.horizontal1732916007947 .view-full1732916007947 .placeholder1732916007947 {
+  -webkit-transform: translateZ(1500px) rotateY(-179.9deg);
+  transform: translateZ(1500px) rotateY(-179.9deg);
+}
+.grid1732916007947 figure img {
+  @apply block w-full;
+}
+.content1732916007947,
+.loading1732916007947 {
+  @apply fixed pointer-events-none inset-0;
+
+  /* Careful, does not work in IE < 11 http://caniuse.com/#search=pointer-events */
+}
+.content1732916007947 {
+  @apply overflow-y-scroll h-0 invisible z-[400];
+
+  /* What seems to be the problem, officer? Well, we have a second scroll bar in Chrome! */
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+.loading1732916007947 {
+  @apply opacity-0 z-[1] transition-opacity duration-[0.5s,transform] delay-[0.5s] scale-50;
+  background: transparent url(../img/preloader.gif) no-repeat center center;
+  -webkit-transform: scale(0.5);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+}
+.loading.show1732916007947 {
+  @apply opacity-100 scale-100;
+  -webkit-transform: scale(1);
+}
+.content1732916007947.show1732916007947 {
+  @apply h-auto pointer-events-auto visible;
+}
+.content1732916007947 > div {
+  @apply z-10 absolute w-full overflow-hidden h-0 opacity-0 top-0;
+  background: #fff;
+}
+.content1732916007947 > div.show1732916007947 {
+  @apply h-auto opacity-100 transition-opacity duration-[0.6s];
+  -webkit-transition: opacity 0.6s;
+}
+.icon1732916007947:before {
+  @apply not-italic font-[normal] normal-case leading-none;
+  font-family: "fontawesome";
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.close-content1732916007947 {
+  @apply fixed z-[1000] text-[1.6em] text-[#0f0f0f] cursor-pointer pointer-events-none opacity-0 transition-opacity duration-[0.3s] p-[1em] right-2.5 top-0 hover:text-[#999] before:content-["\e602"];
+  -webkit-transition: opacity 0.3s;
+}
+.content1732916007947 > div.show1732916007947 ~ .close-content1732916007947 {
+  @apply opacity-100 pointer-events-auto;
+}
+
+/* Dummy content */
+.dummy-img1732916007947,
+.dummy-text1732916007947 {
+  @apply max-w-[600px] w-[90%] opacity-0 transition-opacity duration-[0.5s,transform] delay-[0.5s];
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+}
+.vertical1732916007947 .dummy-img1732916007947,
+.vertical1732916007947 .dummy-text1732916007947 {
+  @apply translate-y-[100px];
+  -webkit-transform: translateY(100px);
+}
+.horizontal1732916007947 .dummy-img1732916007947,
+.horizontal1732916007947 .dummy-text1732916007947 {
+  @apply translate-x-[-100px];
+  -webkit-transform: translateX(-100px);
+}
+.content1732916007947 > div.show1732916007947 .dummy-img1732916007947,
+.content1732916007947 > div.show1732916007947 .dummy-text1732916007947 {
+  @apply opacity-100;
+}
+.vertical1732916007947
+  .content1732916007947
+  > div.show1732916007947
+  .dummy-img1732916007947,
+.vertical1732916007947
+  .content1732916007947
+  > div.show1732916007947
+  .dummy-text1732916007947 {
+  @apply translate-y-0;
+  -webkit-transform: translateY(0);
+}
+.horizontal1732916007947
+  .content1732916007947
+  > div.show1732916007947
+  .dummy-img1732916007947,
+.horizontal1732916007947
+  .content1732916007947
+  > div.show1732916007947
+  .dummy-text1732916007947 {
+  @apply translate-x-0;
+  -webkit-transform: translateX(0);
+}
+p.dummy-text1732916007947:nth-child(2) {
+  @apply delay-[0.1s];
+  -webkit-transition-delay: 0.1s;
+}
+p.dummy-text1732916007947:nth-child(3) {
+  @apply delay-[0.2s];
+  -webkit-transition-delay: 0.2s;
+}
+.dummy-img1732916007947 {
+  @apply h-[400px] bg-[#ddd] mx-auto my-[30px];
+}
+.dummy-text1732916007947 {
+  @apply text-left text-[#181818] text-[1em] mx-auto my-0 px-0 py-2.5 last:pb-[100px];
+  font-family: "Blokk", Arial, serif;
+}
+@media screen and (max-width: 1000px) {
+  .grid1732916007947 figure,
+  .grid1732916007947 .placeholder1732916007947 {
+    @apply w-60 h-[212px];
+  }
+}
